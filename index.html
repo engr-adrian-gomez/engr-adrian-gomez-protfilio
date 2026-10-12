@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Mark Adrian Gomez, CE | Structural Civil Engineer & Virtual Assistant</title>
+    <meta name="title" content="Mark Adrian Gomez, CE | Structural Civil Engineer & Virtual Assistant">
+    <meta name="description" content="Portfolio & educational platform of Mark Adrian Gomez, Licensed Civil Engineer (PRC #0168465) specializing in structural steel design, framing analysis, and virtual administrative support.">
+    <meta name="keywords" content="Mark Adrian Gomez, Civil Engineer Philippines, Structural Engineer Aklan, IDEA StatiCa, SAP2000, Virtual Assistant, Administrative Support, MAGREM Engineering Services">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Mark Adrian Gomez">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mark Adrian Gomez, CE | Structural Engineer & Virtual Assistant">
+    <meta property="og:description" content="Explore structural design projects, virtual administrative support services, and video masterclasses.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#0284c7',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                            950: '#082f49',
+                        },
+                        accent: {
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .code-font { font-family: 'JetBrains Mono', monospace; }
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #f43f5e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-sky-500 selection:text-white min-h-screen flex flex-col">
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 glass-panel border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="#hero" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center font-bold text-lg text-white shadow-lg shadow-sky-500/20 group-hover:scale-105 transition-transform">
+                        MG
+                    </div>
+                    <div>
+                        <span class="font-bold text-lg tracking-tight text-white block">Mark Adrian Gomez, CE</span>
+                        <span class="text-xs text-sky-400 font-mono tracking-wider uppercase block">PRC No. 0168465</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                    <a href="#about" class="hover:text-sky-400 transition-colors">About & Bio</a>
+                    <a href="#skills" class="hover:text-sky-400 transition-colors">Technical Skills</a>
+                    <a href="#experience" class="hover:text-sky-400 transition-colors">Experience</a>
+                    <a href="#portfolio" class="hover:text-sky-400 transition-colors">Projects</a>
+                    <a href="#tutorials" class="hover:text-sky-400 transition-colors flex items-center gap-1.5 text-amber-400">
+                        <i data-lucide="play-circle" class="w-4 h-4"></i> Video Hub
+                    </a>
+                </nav>
+
+                <!-- Actions -->
+                <div class="hidden md:flex items-center gap-3">
+                    <button id="adminBtn" onclick="handleAdminToggle()" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-amber-400 border border-amber-500/30 text-xs font-semibold transition-all">
+                        <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+                        <span id="adminBtnText">Manager Portal</span>
+                    </button>
+                    <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-sky-600 hover:bg-sky-500 text-white font-medium text-sm transition-all shadow-lg shadow-sky-600/20 hover:scale-[1.02]">
+                        <i data-lucide="mail" class="w-4 h-4"></i>
+                        <span>Hire Me</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menuBtn" class="md:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobileMenu" class="hidden md:hidden border-t border-slate-800 bg-slate-900/95 px-4 pt-4 pb-6 space-y-3">
+            <a href="#about" class="block py-2 text-slate-300 hover:text-sky-400">About & Bio</a>
+            <a href="#skills" class="block py-2 text-slate-300 hover:text-sky-400">Technical Skills</a>
+            <a href="#experience" class="block py-2 text-slate-300 hover:text-sky-400">Experience</a>
+            <a href="#portfolio" class="block py-2 text-slate-300 hover:text-sky-400">Projects</a>
+            <a href="#tutorials" class="block py-2 text-amber-400 font-medium">Video Tutorials Hub</a>
+            <button onclick="handleAdminToggle()" class="w-full text-left py-2 text-amber-400 font-medium flex items-center gap-2">
+                <i data-lucide="shield-check" class="w-4 h-4"></i> Manager Portal
+            </button>
+            <div class="pt-4 flex flex-col gap-3">
+                <a href="#contact" class="w-full text-center py-2.5 rounded-lg bg-sky-600 text-white text-sm font-medium">
+                    Contact & Consultation
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section id="hero" class="relative py-24 md:py-32 overflow-hidden border-b border-slate-800/60">
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-10 right-10 w-[400px] h-[400px] bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Left Hero Content -->
+                    <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold tracking-wide uppercase">
+                            <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+                            Licensed Civil Engineer • PRC No. 0168465
+                        </div>
+
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                            Precision <span class="gradient-text">Structural Design</span> & Virtual Assistance
+                        </h1>
+
+                        <p class="text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                            Professional Civil Engineer offering core technical capabilities in structural steel design, connection modeling, and comprehensive administrative support services.
+                        </p>
+
+                        <!-- Download Resume Button -->
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4">
+                            <button onclick="downloadResumePDF()" class="px-6 py-3.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-semibold text-sm transition-all shadow-xl shadow-sky-600/25 flex items-center gap-2 hover:-translate-y-0.5">
+                                <i data-lucide="file-text" class="w-4 h-4"></i>
+                                <span>Download Resume (PDF)</span>
+                            </button>
+                            <a href="#portfolio" class="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 font-semibold text-sm border border-slate-700 transition-all flex items-center gap-2">
+                                <i data-lucide="layers" class="w-4 h-4 text-sky-400"></i>
+                                <span>View Recent Projects</span>
+                            </a>
+                        </div>
+
+                        <!-- Highlights Row -->
+                        <div class="pt-8 grid grid-cols-3 gap-4 border-t border-slate-800/80 text-center lg:text-left">
+                            <div>
+                                <span class="block text-2xl font-bold text-white">87.10%</span>
+                                <span class="text-xs text-slate-400 uppercase tracking-wider">CE Board Rating</span>
+                            </div>
+                            <div>
+                                <span class="block text-2xl font-bold text-white">MAGREM</span>
+                                <span class="text-xs text-slate-400 uppercase tracking-wider">Structural Designer</span>
+                            </div>
+                            <div>
+                                <span class="block text-2xl font-bold text-white">CSC Prof</span>
+                                <span class="text-xs text-slate-400 uppercase tracking-wider">Civil Service Eligible</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Hero Profile Card -->
+                    <div class="lg:col-span-5">
+                        <div class="relative mx-auto max-w-md p-6 rounded-2xl glass-panel shadow-2xl border border-slate-800">
+                            <div class="flex items-center gap-4 border-b border-slate-800 pb-5">
+                                <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center font-bold text-2xl text-white shadow-inner">
+                                    MG
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">Mark Adrian U. Gomez</h3>
+                                    <p class="text-sm text-sky-400 font-medium">Licensed Civil Engineer</p>
+                                    <p class="text-xs text-slate-400">Makato, Aklan, Philippines</p>
+                                </div>
+                            </div>
+
+                            <div class="py-5 space-y-3">
+                                <div class="flex justify-between items-center text-xs py-1.5 px-3 rounded-lg bg-slate-900/60 border border-slate-800">
+                                    <span class="text-slate-400">Board Exam Rating</span>
+                                    <span class="text-sky-400 font-bold font-mono">87.10% (Jan 2019)</span>
+                                </div>
+                                <div class="flex justify-between items-center text-xs py-1.5 px-3 rounded-lg bg-slate-900/60 border border-slate-800">
+                                    <span class="text-slate-400">PRC Registration No.</span>
+                                    <span class="text-emerald-400 font-bold font-mono">0168465 (RA 1080)</span>
+                                </div>
+                                <div class="flex justify-between items-center text-xs py-1.5 px-3 rounded-lg bg-slate-900/60 border border-slate-800">
+                                    <span class="text-slate-400">CSC Eligibility</span>
+                                    <span class="text-amber-400 font-bold font-mono">80.34% (Oct 2015)</span>
+                                </div>
+                            </div>
+
+                            <div class="pt-2 flex items-center justify-between gap-2 border-t border-slate-800">
+                                <a href="mailto:mrkdrngomez@gmail.com" class="flex-1 text-center py-2 px-3 rounded-lg bg-slate-800/80 hover:bg-slate-700 text-xs text-slate-300 font-medium transition-colors flex items-center justify-center gap-1.5">
+                                    <i data-lucide="mail" class="w-3.5 h-3.5 text-sky-400"></i> Email
+                                </a>
+                                <a href="tel:+639298212574" class="flex-1 text-center py-2 px-3 rounded-lg bg-slate-800/80 hover:bg-slate-700 text-xs text-slate-300 font-medium transition-colors flex items-center justify-center gap-1.5">
+                                    <i data-lucide="phone" class="w-3.5 h-3.5 text-emerald-400"></i> Call
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- About & Professional Bio Section -->
+        <section id="about" class="py-20 bg-slate-900/60 border-b border-slate-800/60">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-semibold tracking-wide uppercase">
+                        About & Professional Biography
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Engineering Background & Expertise</h2>
+                    <p class="text-slate-300 text-base leading-relaxed">
+                        I am a Licensed Civil Engineer (PRC No. 0168465) with demonstrated technical capabilities in structural steel framing evaluation, connection modeling, concrete detailing, and municipal public works execution. My experience spans structural design consulting at MAGREM Engineering Services and field engineering site supervision with JTA Builders.
+                    </p>
+                    <p class="text-slate-300 text-base leading-relaxed pt-2 border-t border-slate-800/80">
+                        In addition to my engineering expertise, I also offer administrative support and general virtual assistance services. I can assist with data entry, document preparation, spreadsheet management, email management, file organization, online research, and other administrative tasks. My professional background has developed my attention to detail, organizational skills, accuracy, and ability to meet deadlines. I am adaptable, dependable, and willing to learn new tools and workflows to help clients manage their daily operations efficiently.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="py-20 bg-slate-900/40 border-b border-slate-800/60">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <h2 class="text-3xl font-bold text-white tracking-tight">Core Competencies & Virtual Services</h2>
+                    <p class="text-slate-400 text-sm">Demonstrated technical proficiency in engineering analysis, drafting, and administrative support.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Core Structural Engineering -->
+                    <div class="p-6 rounded-2xl glass-panel border border-slate-800 hover:border-sky-500/50 transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center mb-6">
+                            <i data-lucide="building-2" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Structural & Civil Engineering</h3>
+                        <ul class="space-y-2.5 text-sm text-slate-300">
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-sky-400"></i> Structural Steel Design & Connection Modeling</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-sky-400"></i> Reinforced Concrete Framing & Layouts</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-sky-400"></i> Load Calculations & Code Verification (NSCP)</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-sky-400"></i> Material Quality Control & Concrete Testing</li>
+                        </ul>
+                    </div>
+
+                    <!-- Software & Detailing Tools -->
+                    <div class="p-6 rounded-2xl glass-panel border border-slate-800 hover:border-indigo-500/50 transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center mb-6">
+                            <i data-lucide="cpu" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Technical Software & Tools</h3>
+                        <ul class="space-y-2.5 text-sm text-slate-300">
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-400"></i> AutoCAD Drafting & Structural Detailing</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-400"></i> IDEA StatiCa Connection Modeling</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-400"></i> SAP2000 Structural Frame Analysis</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-400"></i> IntelliCAD Model & Layout Alignment</li>
+                        </ul>
+                    </div>
+
+                    <!-- Virtual Assistance & Administrative Support -->
+                    <div class="p-6 rounded-2xl glass-panel border border-slate-800 hover:border-emerald-500/50 transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-6">
+                            <i data-lucide="clipboard-check" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Virtual & Admin Assistance</h3>
+                        <ul class="space-y-2.5 text-sm text-slate-300">
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> Data Entry & Spreadsheet Management</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> Document Preparation & File Organization</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> Email Management & Online Research</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> Technical Assessments & Progress Reporting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Work Experience Section -->
+        <section id="experience" class="py-20 border-b border-slate-800/60">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-white tracking-tight">Professional Experience</h2>
+                    <p class="text-slate-400 text-sm mt-2">Career history and civil engineering practice.</p>
+                </div>
+
+                <div class="relative border-l border-slate-800 ml-4 md:ml-32 space-y-12">
+                    
+                    <!-- Job 1 -->
+                    <div class="relative pl-8 group">
+                        <div class="hidden md:block absolute -left-36 top-1 text-right w-28 text-xs font-mono text-sky-400 font-semibold">
+                            Aug 2022 – Present
+                        </div>
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-900 border-2 border-sky-400 group-hover:scale-125 transition-transform"></div>
+                        
+                        <div class="p-6 rounded-2xl glass-panel border border-slate-800">
+                            <span class="md:hidden inline-block text-xs font-mono text-sky-400 font-semibold mb-2">Aug 2022 – Present</span>
+                            <h3 class="text-xl font-bold text-white">Structural Designer</h3>
+                            <p class="text-sm font-medium text-slate-400 mb-4">MAGREM Engineering Services</p>
+                            <ul class="space-y-2 text-sm text-slate-300 list-disc list-inside">
+                                <li>Perform structural engineering design calculations, load analysis, and framing layout verification for commercial and residential developments.</li>
+                                <li>Prepare detailed structural drawings, steel connection modeling, and concrete reinforcement plans using AutoCAD.</li>
+                                <li>Collaborate with senior project engineers to ensure design adherence to National Structural Code standards.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Job 2 -->
+                    <div class="relative pl-8 group">
+                        <div class="hidden md:block absolute -left-36 top-1 text-right w-28 text-xs font-mono text-slate-400 font-semibold">
+                            Jul 2021 – Jun 2022
+                        </div>
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-900 border-2 border-slate-600 group-hover:scale-125 transition-transform"></div>
+                        
+                        <div class="p-6 rounded-2xl glass-panel border border-slate-800">
+                            <span class="md:hidden inline-block text-xs font-mono text-slate-400 font-semibold mb-2">Jul 2021 – Jun 2022</span>
+                            <h3 class="text-xl font-bold text-white">Contractual Project Engineer</h3>
+                            <p class="text-sm font-medium text-slate-400 mb-4">LGU - Makato</p>
+                            <ul class="space-y-2 text-sm text-slate-300 list-disc list-inside">
+                                <li>Managed municipal public works and local infrastructure projects under local government administration.</li>
+                                <li>Conducted physical site inspections, evaluated ongoing project progress, and verified technical compliance against project plans.</li>
+                                <li>Prepared accomplishment reports and technical assessments for municipal engineering initiatives.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Job 3 -->
+                    <div class="relative pl-8 group">
+                        <div class="hidden md:block absolute -left-36 top-1 text-right w-28 text-xs font-mono text-slate-400 font-semibold">
+                            Oct 2019 – Feb 2021
+                        </div>
+                        <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-900 border-2 border-slate-600 group-hover:scale-125 transition-transform"></div>
+                        
+                        <div class="p-6 rounded-2xl glass-panel border border-slate-800">
+                            <span class="md:hidden inline-block text-xs font-mono text-slate-400 font-semibold mb-2">Oct 2019 – Feb 2021</span>
+                            <h3 class="text-xl font-bold text-white">Project Site Engineer</h3>
+                            <p class="text-sm font-medium text-slate-400 mb-4">JTA Builders</p>
+                            <ul class="space-y-2 text-sm text-slate-300 list-disc list-inside">
+                                <li>Supervised daily construction activities and managed field personnel to align execution with engineering designs.</li>
+                                <li>Enforced quality control measures for site materials, concrete pouring, and structural steel works.</li>
+                                <li>Resolved field discrepancies between structural blueprints and actual site construction conditions.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Portfolio Section -->
+        <section id="portfolio" class="py-20 bg-slate-900/30 border-b border-slate-800/60">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                    <div>
+                        <h2 class="text-3xl font-bold text-white tracking-tight">Recent Structural Works & Projects</h2>
+                        <p class="text-slate-400 text-sm mt-2">Sample structural designs, connection analysis, and civil developments.</p>
+                    </div>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="rounded-2xl glass-panel overflow-hidden border border-slate-800 hover:border-sky-500/40 transition-all flex flex-col">
+                        <div class="h-48 bg-gradient-to-br from-slate-900 to-slate-800 flex items-center justify-center border-b border-slate-800 relative">
+                            <i data-lucide="box" class="w-16 h-16 text-sky-500/40"></i>
+                            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-slate-950/80 text-xs font-mono text-sky-400 border border-slate-800">IDEA StatiCa</span>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-2">Built-Up Column (BUC) & Moment Connections</h3>
+                                <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                                    Finite element modeling and corner weld fatigue stress analysis for moment-connected beam flange plates under AISC & NSCP codes.
+                                </p>
+                            </div>
+                            <div class="flex items-center justify-between pt-4 border-t border-slate-800 text-xs font-mono text-slate-400">
+                                <span>Steel Connection</span>
+                                <span class="text-sky-400 font-semibold">MAGREM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="rounded-2xl glass-panel overflow-hidden border border-slate-800 hover:border-sky-500/40 transition-all flex flex-col">
+                        <div class="h-48 bg-gradient-to-br from-slate-900 to-slate-800 flex items-center justify-center border-b border-slate-800 relative">
+                            <i data-lucide="activity" class="w-16 h-16 text-indigo-500/40"></i>
+                            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-slate-950/80 text-xs font-mono text-indigo-400 border border-slate-800">SAP2000</span>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-2">Covered Two-Court Pickleball Facility</h3>
+                                <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                                    Structural frame analysis, wind load resistance evaluation, foundation design, and steel canopy framing calculations.
+                                </p>
+                            </div>
+                            <div class="flex items-center justify-between pt-4 border-t border-slate-800 text-xs font-mono text-slate-400">
+                                <span>Canopy Framing</span>
+                                <span class="text-indigo-400 font-semibold">Design & Analysis</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="rounded-2xl glass-panel overflow-hidden border border-slate-800 hover:border-sky-500/40 transition-all flex flex-col">
+                        <div class="h-48 bg-gradient-to-br from-slate-900 to-slate-800 flex items-center justify-center border-b border-slate-800 relative">
+                            <i data-lucide="shield" class="w-16 h-16 text-emerald-500/40"></i>
+                            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-slate-950/80 text-xs font-mono text-emerald-400 border border-slate-800">AWS D1.2</span>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-2">Aluminum Wind Barrier Panel Design</h3>
+                                <p class="text-slate-400 text-xs leading-relaxed mb-4">
+                                    Fatigue cycle count, fillet weld sizing, and filler alloy capacity verification for aluminum wind barrier panels.
+                                </p>
+                            </div>
+                            <div class="flex items-center justify-between pt-4 border-t border-slate-800 text-xs font-mono text-slate-400">
+                                <span>Wind Barrier</span>
+                                <span class="text-emerald-400 font-semibold">Specialized Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Subscriber Video Educational Hub & Manager Platform -->
+        <section id="tutorials" class="py-20 border-b border-slate-800/60 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-gradient-to-r from-sky-950/80 to-indigo-950/80 rounded-3xl p-8 md:p-12 border border-sky-500/20 relative">
+                    
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
+                        <div class="max-w-3xl space-y-4">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold uppercase">
+                                <i data-lucide="lock" class="w-3.5 h-3.5"></i>
+                                Subscriber Educational Platform
+                            </div>
+                            <h2 class="text-3xl md:text-4xl font-extrabold text-white">Structural Engineering Masterclass Hub</h2>
+                            <p class="text-slate-300 text-sm md:text-base leading-relaxed">
+                                Access step-by-step video tutorials covering IDEA StatiCa connection modeling, SAP2000 frame analysis, AutoCAD structural detailing, and NSCP compliance.
+                            </p>
+                        </div>
+
+                        <!-- Admin Upload Button (Visible only when logged in as Manager) -->
+                        <div id="adminControls" class="hidden flex-shrink-0">
+                            <button onclick="openUploadModal()" class="px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm transition-all shadow-lg shadow-emerald-600/30 flex items-center gap-2">
+                                <i data-lucide="plus-circle" class="w-5 h-5"></i>
+                                <span>Upload New Video</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Dynamic Video Grid -->
+                    <div id="videoGrid" class="grid md:grid-cols-3 gap-6 mb-10">
+                        <!-- Videos are rendered via JavaScript -->
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-between gap-6 p-6 rounded-2xl bg-slate-900/80 border border-slate-800">
+                        <div>
+                            <h3 class="font-bold text-white text-lg">Subscribe for Full Masterclass Access</h3>
+                            <p class="text-slate-400 text-xs">Join fellow engineers & students for weekly structural engineering tutorials.</p>
+                        </div>
+                        <button onclick="openSubscribeModal()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm transition-all shadow-lg shadow-amber-500/20">
+                            Subscribe to Unlock Videos
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+                    <h2 class="text-3xl font-bold text-white tracking-tight">Get in Touch / Request Consultation</h2>
+                    <p class="text-slate-400 text-sm">Need structural design calculations, connection modeling, or virtual administrative assistance?</p>
+                </div>
+
+                <div class="p-8 rounded-2xl glass-panel border border-slate-800">
+                    <form id="contactForm" onsubmit="handleContactSubmit(event)" class="space-y-6">
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Full Name</label>
+                                <input type="text" required placeholder="Engr. Juan Dela Cruz" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder:text-slate-600 focus:outline-none focus:border-sky-500 text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Email Address</label>
+                                <input type="email" required placeholder="client@company.com" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder:text-slate-600 focus:outline-none focus:border-sky-500 text-sm">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Inquiry Type</label>
+                            <select class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white focus:outline-none focus:border-sky-500 text-sm">
+                                <option>Structural Design & Calculation</option>
+                                <option>Steel Connection Analysis (IDEA StatiCa)</option>
+                                <option>Virtual Assistance & Administrative Support</option>
+                                <option>Construction Site Supervision</option>
+                                <option>Video Subscription Support</option>
+                                <option>General Inquiry</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Message</label>
+                            <textarea rows="4" required placeholder="Describe your structural engineering or administrative support requirements..." class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white placeholder:text-slate-600 focus:outline-none focus:border-sky-500 text-sm"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-3.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-sm transition-all shadow-lg shadow-sky-600/20">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800/80 bg-slate-950 py-10 text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div>
+                <p class="text-slate-400 font-medium">Mark Adrian Ureta Gomez, CE</p>
+                <p>Licensed Civil Engineer • PRC No. 0168465 • Makato, Aklan 5611</p>
+            </div>
+            <p>© 2026 Mark Adrian Gomez. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Manager Upload Video Modal -->
+    <div id="uploadModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-lg w-full p-6 relative">
+            <button onclick="closeUploadModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            
+            <div class="text-center space-y-2 mb-6">
+                <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mx-auto">
+                    <i data-lucide="video" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white">Upload New Masterclass Video</h3>
+                <p class="text-xs text-slate-400">Add a new video tutorial to the subscriber platform.</p>
+            </div>
+
+            <form onsubmit="handleVideoUpload(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Video Title</label>
+                    <input type="text" id="videoTitle" required placeholder="e.g., Advanced Non-Linear Connection Analysis" class="w-full px-3.5 py-2.5 rounded-lg bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:border-emerald-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Description</label>
+                    <input type="text" id="videoDesc" required placeholder="e.g., Step-by-step modeling for Built-Up Columns" class="w-full px-3.5 py-2.5 rounded-lg bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:border-emerald-500">
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Duration (mm:ss)</label>
+                        <input type="text" id="videoDuration" required placeholder="25:30" class="w-full px-3.5 py-2.5 rounded-lg bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:border-emerald-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Category Color</label>
+                        <select id="videoColor" class="w-full px-3.5 py-2.5 rounded-lg bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:border-emerald-500">
+                            <option value="sky">Sky Blue (IDEA StatiCa)</option>
+                            <option value="indigo">Indigo (SAP2000)</option>
+                            <option value="emerald">Emerald (AutoCAD)</option>
+                            <option value="amber">Amber (General)</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="w-full py-3 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm transition-all shadow-lg shadow-emerald-600/20">
+                    Publish Video
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Subscription Modal -->
+    <div id="subModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-md w-full p-6 relative">
+            <button onclick="closeSubscribeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            
+            <div class="text-center space-y-3 mb-6">
+                <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center mx-auto">
+                    <i data-lucide="tv" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white">Subscribe to Educational Hub</h3>
+                <p class="text-xs text-slate-400">Get unlimited access to video tutorials on structural design, IDEA StatiCa, and SAP2000.</p>
+            </div>
+
+            <form onsubmit="handleSubscribeSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Your Name</label>
+                    <input type="text" required placeholder="Engr. Mark" class="w-full px-3.5 py-2.5 rounded-lg bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:border-amber-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Email Address</label>
+                    <input type="email" required placeholder="engineer@gmail.com" class="w-full px-3.5 py-2.5 rounded-lg bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:border-amber-500">
+                </div>
+                <button type="submit" class="w-full py-3 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm transition-all">
+                    Confirm Subscription
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- jsPDF Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+        // Default Videos Array
+        const defaultVideos = [
+            {
+                id: 1,
+                title: "IDEA StatiCa Connection Modeling",
+                desc: "Welded joint fatigue checking & non-linear analysis.",
+                duration: "24:15",
+                color: "sky"
+            },
+            {
+                id: 2,
+                title: "SAP2000 Section Designer Guide",
+                desc: "Exporting structural models to connection software seamlessly.",
+                duration: "38:40",
+                color: "indigo"
+            },
+            {
+                id: 3,
+                title: "AutoCAD Linetype Scale Standardization",
+                desc: "Model Space vs. Layout Viewport synchronization for structural drawings.",
+                duration: "18:50",
+                color: "emerald"
+            }
+        ];
+
+        let isAdmin = false;
+        let videos = JSON.parse(localStorage.getItem('mag_videos')) || defaultVideos;
+
+        function saveVideos() {
+            localStorage.setItem('mag_videos', JSON.stringify(videos));
+        }
+
+        function renderVideos() {
+            const grid = document.getElementById('videoGrid');
+            grid.innerHTML = '';
+
+            videos.forEach(video => {
+                const textColor = video.color === 'sky' ? 'text-sky-400' : 
+                                  video.color === 'indigo' ? 'text-indigo-400' : 
+                                  video.color === 'emerald' ? 'text-emerald-400' : 'text-amber-400';
+
+                const card = document.createElement('div');
+                card.className = "rounded-xl bg-slate-900/90 border border-slate-800 p-5 relative group flex flex-col justify-between";
+                card.innerHTML = `
+                    <div>
+                        <div class="aspect-video bg-slate-950 rounded-lg flex items-center justify-center mb-4 relative overflow-hidden">
+                            <i data-lucide="play-circle" class="w-12 h-12 ${textColor} group-hover:scale-110 transition-transform"></i>
+                            <span class="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-black/80 text-[10px] font-mono text-slate-300">${video.duration}</span>
+                        </div>
+                        <h4 class="font-bold text-white text-sm mb-1">${video.title}</h4>
+                        <p class="text-xs text-slate-400 mb-3">${video.desc}</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-2 border-t border-slate-800/60 mt-2">
+                        <span class="inline-block text-[11px] font-semibold text-amber-400 bg-amber-400/10 px-2.5 py-1 rounded">Subscriber Exclusive</span>
+                        ${isAdmin ? `<button onclick="deleteVideo(${video.id})" class="px-2.5 py-1 rounded bg-rose-500/20 text-rose-400 border border-rose-500/30 text-xs font-semibold hover:bg-rose-500 hover:text-white transition-all flex items-center gap-1"><i data-lucide="trash-2" class="w-3.5 h-3.5"></i> Delete</button>` : ''}
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+
+            lucide.createIcons();
+        }
+
+        function handleAdminToggle() {
+            if (isAdmin) {
+                isAdmin = false;
+                document.getElementById('adminBtnText').innerText = "Manager Portal";
+                document.getElementById('adminControls').classList.add('hidden');
+                alert("Logged out of Manager Mode.");
+            } else {
+                const pwd = prompt("Enter Manager Password to manage platform videos:", "admin");
+                if (pwd === "admin") {
+                    isAdmin = true;
+                    document.getElementById('adminBtnText').innerText = "Exit Manager Mode";
+                    document.getElementById('adminControls').classList.remove('hidden');
+                    alert("Manager access granted! You can now upload and delete videos.");
+                } else if (pwd !== null) {
+                    alert("Incorrect password!");
+                }
+            }
+            renderVideos();
+        }
+
+        function openUploadModal() {
+            document.getElementById('uploadModal').classList.remove('hidden');
+        }
+
+        function closeUploadModal() {
+            document.getElementById('uploadModal').classList.add('hidden');
+        }
+
+        function handleVideoUpload(e) {
+            e.preventDefault();
+            const title = document.getElementById('videoTitle').value;
+            const desc = document.getElementById('videoDesc').value;
+            const duration = document.getElementById('videoDuration').value;
+            const color = document.getElementById('videoColor').value;
+
+            const newVid = {
+                id: Date.now(),
+                title,
+                desc,
+                duration,
+                color
+            };
+
+            videos.push(newVid);
+            saveVideos();
+            renderVideos();
+            closeUploadModal();
+            e.target.reset();
+            alert('New video published successfully!');
+        }
+
+        function deleteVideo(id) {
+            if (confirm("Are you sure you want to delete this video from the educational platform?")) {
+                videos = videos.filter(v => v.id !== id);
+                saveVideos();
+                renderVideos();
+            }
+        }
+
+        // Standard Modal Functions
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+        function openSubscribeModal() { document.getElementById('subModal').classList.remove('hidden'); }
+        function closeSubscribeModal() { document.getElementById('subModal').classList.add('hidden'); }
+        function handleSubscribeSubmit(e) { e.preventDefault(); alert('Thank you for subscribing!'); closeSubscribeModal(); }
+        function handleContactSubmit(e) { e.preventDefault(); alert('Thank you for reaching out!'); e.target.reset(); }
+
+        // Initial Load
+        renderVideos();
+
+        // PDF Generation function containing full CV content
+        function downloadResumePDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            const primaryColor = [2, 132, 199];
+            const darkColor = [15, 23, 42];
+            const bodyColor = [51, 65, 85];
+
+            // Header Section
+            doc.setFillColor(...darkColor);
+            doc.rect(0, 0, 210, 42, 'F');
+
+            doc.setTextColor(255, 255, 255);
+            doc.setFont('helvetica', 'bold');
+            doc.setFontSize(20);
+            doc.text('MARK ADRIAN U. GOMEZ', 14, 18);
+
+            doc.setFontSize(11);
+            doc.setFont('helvetica', 'normal');
+            doc.setTextColor(56, 189, 248);
+            doc.text('Licensed Civil Engineer | Structural Designer', 14, 26);
+
+            doc.setFontSize(9);
+            doc.setTextColor(203, 213, 225);
+            doc.text('Location: Cayangwan, Makato, Aklan 5611 | Phone: +63 929 821 2574 | Email: mrkdrngomez@gmail.com', 14, 34);
+
+            let y = 52;
+
+            function addSectionHeader(title) {
+                doc.setFontSize(12);
+                doc.setFont('helvetica', 'bold');
+                doc.setTextColor(...primaryColor);
+                doc.text(title.toUpperCase(), 14, y);
+                doc.setDrawColor(...primaryColor);
+                doc.setLineWidth(0.5);
+                doc.line(14, y + 2, 196, y + 2);
+                y += 9;
+            }
+
+            // Summary
+            addSectionHeader('Professional Summary');
+            doc.setFontSize(9.5);
+            doc.setFont('helvetica', 'normal');
+            doc.setTextColor(...bodyColor);
+            const summaryText = "Licensed Civil Engineer with core technical capabilities in structural design, steel framing evaluation, and civil infrastructure projects. Demonstrated experience in structural detailing, municipal construction monitoring, and jobsite engineering supervision. Proficient in AutoCAD drafting, structural analysis, and compliance with Philippine national engineering standards.";
+            const splitSummary = doc.splitTextToSize(summaryText, 182);
+            doc.text(splitSummary, 14, y);
+            y += splitSummary.length * 5 + 4;
+
+            // Licensure
+            addSectionHeader('Civil Service & Professional Licensure');
+            doc.setFontSize(9.5);
+            doc.setFont('helvetica', 'bold');
+            doc.setTextColor(...darkColor);
+            doc.text('Board Civil Engineer (RA 1080)', 14, y);
+            doc.setFont('helvetica', 'normal');
+            doc.setTextColor(...bodyColor);
+            doc.text('Rating: 87.10%   |   Conferment: Jan 29, 2019   |   PRC No. 0168465', 85, y);
+            y += 6;
+
+            doc.setFont('helvetica', 'bold');
+            doc.setTextColor(...darkColor);
+            doc.text('CSC Professional Eligibility', 14, y);
+            doc.setFont('helvetica', 'normal');
+            doc.setTextColor(...bodyColor);
+            doc.text('Rating: 80.34%   |   Conferment: Oct 18, 2015   |   No. 2006151006411801', 85, y);
+            y += 10;
+
+            // Professional Experience
+            addSectionHeader('Professional Experience');
+
+            // Job 1
+            doc.setFont('helvetica', 'bold');
+            doc.setTextColor(...darkColor);
+            doc.text('Structural Designer', 14, y);
+            doc.setFont('helvetica', 'normal');
+            doc.text('MAGREM Engineering Services | August 2022 – Present', 196, y, { align: 'right' });
+            y += 5;
+
+            doc.setFontSize(9);
+            const job1Bullets = [
+                '• Perform structural engineering design calculations, load analysis, and framing layout verification for commercial and residential developments.',
+                '• Prepare detailed structural drawings, steel connection modeling, and concrete reinforcement plans using AutoCAD.',
+                '• Collaborate with senior project engineers to ensure design adherence to National Structural Code standards.'
+            ];
+            job1Bullets.forEach(b => {
+                const s = doc.splitTextToSize(b, 178);
+                doc.text(s, 18, y);
+                y += s.length * 4.5;
+            });
+            y += 3;
+
+            // Job 2
+            doc.setFontSize(9.5);
+            doc.setFont('helvetica', 'bold');
+            doc.text('Contractual Project Engineer', 14, y);
+            doc.setFont('helvetica', 'normal');
+            doc.text('LGU - Makato | July 2021 – June 2022', 196, y, { align: 'right' });
+            y += 5;
+
+            doc.setFontSize(9);
+            const job2Bullets = [
+                '• Managed municipal public works and local infrastructure projects under local government administration.',
+                '• Conducted physical site inspections, evaluated ongoing project progress, and verified technical compliance against project plans.',
+                '• Prepared accomplishment reports and technical assessments for municipal engineering initiatives.'
+            ];
+            job2Bullets.forEach(b => {
+                const s = doc.splitTextToSize(b, 178);
+                doc.text(s, 18, y);
+                y += s.length * 4.5;
+            });
+            y += 3;
+
+            // Job 3
+            doc.setFontSize(9.5);
+            doc.setFont('helvetica', 'bold');
+            doc.text('Project Site Engineer', 14, y);
+            doc.setFont('helvetica', 'normal');
+            doc.text('JTA Builders | October 2019 – February 2021', 196, y, { align: 'right' });
+            y += 5;
+
+            doc.setFontSize(9);
+            const job3Bullets = [
+                '• Supervised daily construction activities and managed field personnel to align execution with engineering designs.',
+                '• Enforced quality control measures for site materials, concrete pouring, and structural steel works.',
+                '• Resolved field discrepancies between structural blueprints and actual site construction conditions.'
+            ];
+            job3Bullets.forEach(b => {
+                const s = doc.splitTextToSize(b, 178);
+                doc.text(s, 18, y);
+                y += s.length * 4.5;
+            });
+            y += 6;
+
+            // Education
+            addSectionHeader('Educational Background');
+            doc.setFontSize(9.5);
+            doc.setFont('helvetica', 'bold');
+            doc.text('Bachelor of Science in Civil Engineering', 14, y);
+            doc.setFont('helvetica', 'normal');
+            doc.text('Garcia College of Technology | 2013–2018', 196, y, { align: 'right' });
+            y += 5;
+            doc.setFontSize(9);
+            doc.text('Academic Awards Recipient', 18, y);
+            y += 10;
+
+            // Technical Competencies
+            addSectionHeader('Technical Competencies');
+            doc.setFontSize(9);
+            doc.setFont('helvetica', 'normal');
+            doc.text('Core Engineering: Structural Steel Design, Frame Analysis, Reinforced Concrete, Site Supervision', 14, y); y += 5;
+            doc.text('Software & Tools: AutoCAD Drafting, Structural Detailing, Technical Report Writing', 14, y);
+
+            doc.save('Mark_Adrian_Gomez_Curriculum_Vitae.pdf');
+        }
+    </script>
+</body>
+</html>
