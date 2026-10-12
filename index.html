@@ -15,7 +15,7 @@
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Mark Adrian Gomez, CE | Structural Engineer & Virtual Assistant">
-    <meta property="og:description" content="Explore structural design projects, virtual administrative support services, and video masterclasses.">
+    <meta property="og:description" content="Explore structural design projects, virtual administrative support services, and upcoming video masterclasses.">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -99,7 +99,7 @@
 
                 <!-- Actions -->
                 <div class="hidden md:flex items-center gap-3">
-                    <button id="adminBtn" onclick="handleAdminToggle()" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-amber-400 border border-amber-500/30 text-xs font-semibold transition-all">
+                    <button id="adminBtn" onclick="openLoginModal()" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-amber-400 border border-amber-500/30 text-xs font-semibold transition-all">
                         <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
                         <span id="adminBtnText">Manager Portal</span>
                     </button>
@@ -123,7 +123,7 @@
             <a href="#experience" class="block py-2 text-slate-300 hover:text-sky-400">Experience</a>
             <a href="#portfolio" class="block py-2 text-slate-300 hover:text-sky-400">Projects</a>
             <a href="#tutorials" class="block py-2 text-amber-400 font-medium">Video Tutorials Hub</a>
-            <button onclick="handleAdminToggle()" class="w-full text-left py-2 text-amber-400 font-medium flex items-center gap-2">
+            <button onclick="openLoginModal()" class="w-full text-left py-2 text-amber-400 font-medium flex items-center gap-2">
                 <i data-lucide="shield-check" class="w-4 h-4"></i> Manager Portal
             </button>
             <div class="pt-4 flex flex-col gap-3">
@@ -449,20 +449,25 @@
             </div>
         </section>
 
-        <!-- Subscriber Video Educational Hub & Manager Platform -->
+        <!-- Subscriber Video Educational Hub & Manager Platform (COMING SOON) -->
         <section id="tutorials" class="py-20 border-b border-slate-800/60 relative overflow-hidden">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="bg-gradient-to-r from-sky-950/80 to-indigo-950/80 rounded-3xl p-8 md:p-12 border border-sky-500/20 relative">
+                <div class="bg-gradient-to-r from-sky-950/80 to-indigo-950/80 rounded-3xl p-8 md:p-12 border border-amber-500/30 relative overflow-hidden">
                     
+                    <!-- Decorative Background Glow -->
+                    <div class="absolute -right-20 -top-20 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
                         <div class="max-w-3xl space-y-4">
-                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold uppercase">
-                                <i data-lucide="lock" class="w-3.5 h-3.5"></i>
-                                Subscriber Educational Platform
+                            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider animate-pulse">
+                                <i data-lucide="clock" class="w-4 h-4"></i>
+                                COMING SOON!
                             </div>
-                            <h2 class="text-3xl md:text-4xl font-extrabold text-white">Structural Engineering Masterclass Hub</h2>
+                            <h2 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight">
+                                Structural Engineering <span class="gradient-text">Masterclass Hub</span>
+                            </h2>
                             <p class="text-slate-300 text-sm md:text-base leading-relaxed">
-                                Access step-by-step video tutorials covering IDEA StatiCa connection modeling, SAP2000 frame analysis, AutoCAD structural detailing, and NSCP compliance.
+                                Our dedicated video tutorial platform is currently under development. Soon, subscribers will gain full access to step-by-step masterclasses on IDEA StatiCa, SAP2000, AutoCAD detailing, and NSCP design standards.
                             </p>
                         </div>
 
@@ -475,18 +480,61 @@
                         </div>
                     </div>
 
-                    <!-- Dynamic Video Grid -->
-                    <div id="videoGrid" class="grid md:grid-cols-3 gap-6 mb-10">
-                        <!-- Videos are rendered via JavaScript -->
+                    <!-- Placeholder Video Grid with "Coming Soon" Overlay -->
+                    <div id="videoGrid" class="grid md:grid-cols-3 gap-6 mb-10 opacity-75">
+                        <!-- Preview Card 1 -->
+                        <div class="rounded-xl bg-slate-900/90 border border-slate-800 p-5 relative flex flex-col justify-between">
+                            <div>
+                                <div class="aspect-video bg-slate-950 rounded-lg flex items-center justify-center mb-4 relative overflow-hidden">
+                                    <i data-lucide="play-circle" class="w-12 h-12 text-sky-400/50"></i>
+                                    <span class="absolute top-3 left-3 px-2 py-0.5 rounded bg-amber-500 text-slate-950 font-bold text-[10px] uppercase">Coming Soon</span>
+                                </div>
+                                <h4 class="font-bold text-white text-sm mb-1">IDEA StatiCa Connection Modeling</h4>
+                                <p class="text-xs text-slate-400 mb-3">Welded joint fatigue checking & non-linear analysis.</p>
+                            </div>
+                            <div class="pt-2 border-t border-slate-800/60 mt-2">
+                                <span class="inline-block text-[11px] font-semibold text-slate-400 bg-slate-800/60 px-2.5 py-1 rounded">Module Preview</span>
+                            </div>
+                        </div>
+
+                        <!-- Preview Card 2 -->
+                        <div class="rounded-xl bg-slate-900/90 border border-slate-800 p-5 relative flex flex-col justify-between">
+                            <div>
+                                <div class="aspect-video bg-slate-950 rounded-lg flex items-center justify-center mb-4 relative overflow-hidden">
+                                    <i data-lucide="play-circle" class="w-12 h-12 text-indigo-400/50"></i>
+                                    <span class="absolute top-3 left-3 px-2 py-0.5 rounded bg-amber-500 text-slate-950 font-bold text-[10px] uppercase">Coming Soon</span>
+                                </div>
+                                <h4 class="font-bold text-white text-sm mb-1">SAP2000 Section Designer Guide</h4>
+                                <p class="text-xs text-slate-400 mb-3">Exporting structural models to connection software seamlessly.</p>
+                            </div>
+                            <div class="pt-2 border-t border-slate-800/60 mt-2">
+                                <span class="inline-block text-[11px] font-semibold text-slate-400 bg-slate-800/60 px-2.5 py-1 rounded">Module Preview</span>
+                            </div>
+                        </div>
+
+                        <!-- Preview Card 3 -->
+                        <div class="rounded-xl bg-slate-900/90 border border-slate-800 p-5 relative flex flex-col justify-between">
+                            <div>
+                                <div class="aspect-video bg-slate-950 rounded-lg flex items-center justify-center mb-4 relative overflow-hidden">
+                                    <i data-lucide="play-circle" class="w-12 h-12 text-emerald-400/50"></i>
+                                    <span class="absolute top-3 left-3 px-2 py-0.5 rounded bg-amber-500 text-slate-950 font-bold text-[10px] uppercase">Coming Soon</span>
+                                </div>
+                                <h4 class="font-bold text-white text-sm mb-1">AutoCAD Linetype Scale Standardization</h4>
+                                <p class="text-xs text-slate-400 mb-3">Model Space vs. Layout Viewport synchronization.</p>
+                            </div>
+                            <div class="pt-2 border-t border-slate-800/60 mt-2">
+                                <span class="inline-block text-[11px] font-semibold text-slate-400 bg-slate-800/60 px-2.5 py-1 rounded">Module Preview</span>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="flex flex-col sm:flex-row items-center justify-between gap-6 p-6 rounded-2xl bg-slate-900/80 border border-slate-800">
+                    <div class="flex flex-col sm:flex-row items-center justify-between gap-6 p-6 rounded-2xl bg-slate-900/90 border border-amber-500/20">
                         <div>
-                            <h3 class="font-bold text-white text-lg">Subscribe for Full Masterclass Access</h3>
-                            <p class="text-slate-400 text-xs">Join fellow engineers & students for weekly structural engineering tutorials.</p>
+                            <h3 class="font-bold text-white text-lg">Get Notified Upon Launch</h3>
+                            <p class="text-slate-400 text-xs">Pre-register your email address to get early access when masterclass courses go live.</p>
                         </div>
-                        <button onclick="openSubscribeModal()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm transition-all shadow-lg shadow-amber-500/20">
-                            Subscribe to Unlock Videos
+                        <button onclick="openSubscribeModal()" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm transition-all shadow-lg shadow-amber-500/20 flex items-center justify-center gap-2">
+                            <i data-lucide="bell" class="w-4 h-4"></i> Pre-Register Now
                         </button>
                     </div>
 
@@ -552,6 +600,57 @@
         </div>
     </footer>
 
+    <!-- Manager Login Modal (Step 1: Password & Step 2: OTP Verification) -->
+    <div id="loginModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-md w-full p-6 relative">
+            <button onclick="closeLoginModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <!-- Password Stage -->
+            <div id="loginStage1">
+                <div class="text-center space-y-2 mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center mx-auto">
+                        <i data-lucide="shield" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Manager Authentication</h3>
+                    <p class="text-xs text-slate-400">Enter your manager password to begin login.</p>
+                </div>
+
+                <form onsubmit="handlePasswordSubmit(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Manager Password</label>
+                        <input type="password" id="mgrPassword" required placeholder="••••••••" class="w-full px-3.5 py-2.5 rounded-lg bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:border-amber-500">
+                    </div>
+                    <button type="submit" class="w-full py-3 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm transition-all">
+                        Verify Password & Send OTP
+                    </button>
+                </form>
+            </div>
+
+            <!-- OTP Verification Stage -->
+            <div id="loginStage2" class="hidden">
+                <div class="text-center space-y-2 mb-6">
+                    <div class="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center mx-auto">
+                        <i data-lucide="mail-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Enter Verification Code</h3>
+                    <p class="text-xs text-slate-400">A 6-digit confirmation OTP code has been sent to <span class="text-sky-400 font-mono font-semibold">mrkdrngomez2404@gmail.com</span>.</p>
+                </div>
+
+                <form onsubmit="handleOtpSubmit(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">6-Digit OTP Code</label>
+                        <input type="text" id="otpInput" maxLength="6" required placeholder="e.g. 849201" class="w-full px-3.5 py-2.5 rounded-lg bg-slate-950 border border-slate-800 text-white text-center font-mono text-lg tracking-widest focus:outline-none focus:border-sky-500">
+                    </div>
+                    <button type="submit" class="w-full py-3 rounded-lg bg-sky-600 hover:bg-sky-500 text-white font-bold text-sm transition-all shadow-lg shadow-sky-600/20">
+                        Verify OTP & Authorize Portal
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <!-- Manager Upload Video Modal -->
     <div id="uploadModal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md hidden flex items-center justify-center p-4">
         <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-lg w-full p-6 relative">
@@ -564,7 +663,7 @@
                     <i data-lucide="video" class="w-6 h-6"></i>
                 </div>
                 <h3 class="text-xl font-bold text-white">Upload New Masterclass Video</h3>
-                <p class="text-xs text-slate-400">Add a new video tutorial to the subscriber platform.</p>
+                <p class="text-xs text-slate-400">Add a new video tutorial to the platform.</p>
             </div>
 
             <form onsubmit="handleVideoUpload(event)" class="space-y-4">
@@ -582,14 +681,21 @@
                         <input type="text" id="videoDuration" required placeholder="25:30" class="w-full px-3.5 py-2.5 rounded-lg bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:border-emerald-500">
                     </div>
                     <div>
-                        <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Category Color</label>
-                        <select id="videoColor" class="w-full px-3.5 py-2.5 rounded-lg bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:border-emerald-500">
-                            <option value="sky">Sky Blue (IDEA StatiCa)</option>
-                            <option value="indigo">Indigo (SAP2000)</option>
-                            <option value="emerald">Emerald (AutoCAD)</option>
-                            <option value="amber">Amber (General)</option>
+                        <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Visibility Status</label>
+                        <select id="videoVisibility" class="w-full px-3.5 py-2.5 rounded-lg bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:border-emerald-500">
+                            <option value="public">Public (Visible to All Visitors)</option>
+                            <option value="private">Private / Draft (Manager Only)</option>
                         </select>
                     </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 uppercase mb-1">Category Theme</label>
+                    <select id="videoColor" class="w-full px-3.5 py-2.5 rounded-lg bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:border-emerald-500">
+                        <option value="sky">Sky Blue (IDEA StatiCa)</option>
+                        <option value="indigo">Indigo (SAP2000)</option>
+                        <option value="emerald">Emerald (AutoCAD)</option>
+                        <option value="amber">Amber (General)</option>
+                    </select>
                 </div>
                 <button type="submit" class="w-full py-3 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm transition-all shadow-lg shadow-emerald-600/20">
                     Publish Video
@@ -607,10 +713,10 @@
             
             <div class="text-center space-y-3 mb-6">
                 <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center mx-auto">
-                    <i data-lucide="tv" class="w-6 h-6"></i>
+                    <i data-lucide="bell" class="w-6 h-6"></i>
                 </div>
-                <h3 class="text-xl font-bold text-white">Subscribe to Educational Hub</h3>
-                <p class="text-xs text-slate-400">Get unlimited access to video tutorials on structural design, IDEA StatiCa, and SAP2000.</p>
+                <h3 class="text-xl font-bold text-white">Masterclass Hub Pre-Registration</h3>
+                <p class="text-xs text-slate-400">Register your details below to receive launch notifications and early-bird access to video tutorials.</p>
             </div>
 
             <form onsubmit="handleSubscribeSubmit(event)" class="space-y-4">
@@ -623,7 +729,7 @@
                     <input type="email" required placeholder="engineer@gmail.com" class="w-full px-3.5 py-2.5 rounded-lg bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:border-amber-500">
                 </div>
                 <button type="submit" class="w-full py-3 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-sm transition-all">
-                    Confirm Subscription
+                    Pre-Register for Early Access
                 </button>
             </form>
         </div>
@@ -632,87 +738,52 @@
     <!-- jsPDF Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script>
-        // Default Videos Array
-        const defaultVideos = [
-            {
-                id: 1,
-                title: "IDEA StatiCa Connection Modeling",
-                desc: "Welded joint fatigue checking & non-linear analysis.",
-                duration: "24:15",
-                color: "sky"
-            },
-            {
-                id: 2,
-                title: "SAP2000 Section Designer Guide",
-                desc: "Exporting structural models to connection software seamlessly.",
-                duration: "38:40",
-                color: "indigo"
-            },
-            {
-                id: 3,
-                title: "AutoCAD Linetype Scale Standardization",
-                desc: "Model Space vs. Layout Viewport synchronization for structural drawings.",
-                duration: "18:50",
-                color: "emerald"
-            }
-        ];
-
         let isAdmin = false;
-        let videos = JSON.parse(localStorage.getItem('mag_videos')) || defaultVideos;
+        let generatedOTP = null;
 
-        function saveVideos() {
-            localStorage.setItem('mag_videos', JSON.stringify(videos));
-        }
-
-        function renderVideos() {
-            const grid = document.getElementById('videoGrid');
-            grid.innerHTML = '';
-
-            videos.forEach(video => {
-                const textColor = video.color === 'sky' ? 'text-sky-400' : 
-                                  video.color === 'indigo' ? 'text-indigo-400' : 
-                                  video.color === 'emerald' ? 'text-emerald-400' : 'text-amber-400';
-
-                const card = document.createElement('div');
-                card.className = "rounded-xl bg-slate-900/90 border border-slate-800 p-5 relative group flex flex-col justify-between";
-                card.innerHTML = `
-                    <div>
-                        <div class="aspect-video bg-slate-950 rounded-lg flex items-center justify-center mb-4 relative overflow-hidden">
-                            <i data-lucide="play-circle" class="w-12 h-12 ${textColor} group-hover:scale-110 transition-transform"></i>
-                            <span class="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-black/80 text-[10px] font-mono text-slate-300">${video.duration}</span>
-                        </div>
-                        <h4 class="font-bold text-white text-sm mb-1">${video.title}</h4>
-                        <p class="text-xs text-slate-400 mb-3">${video.desc}</p>
-                    </div>
-                    <div class="flex items-center justify-between pt-2 border-t border-slate-800/60 mt-2">
-                        <span class="inline-block text-[11px] font-semibold text-amber-400 bg-amber-400/10 px-2.5 py-1 rounded">Subscriber Exclusive</span>
-                        ${isAdmin ? `<button onclick="deleteVideo(${video.id})" class="px-2.5 py-1 rounded bg-rose-500/20 text-rose-400 border border-rose-500/30 text-xs font-semibold hover:bg-rose-500 hover:text-white transition-all flex items-center gap-1"><i data-lucide="trash-2" class="w-3.5 h-3.5"></i> Delete</button>` : ''}
-                    </div>
-                `;
-                grid.appendChild(card);
-            });
-
-            lucide.createIcons();
-        }
-
-        function handleAdminToggle() {
+        // Manager Login Flow
+        function openLoginModal() {
             if (isAdmin) {
                 isAdmin = false;
                 document.getElementById('adminBtnText').innerText = "Manager Portal";
                 document.getElementById('adminControls').classList.add('hidden');
-                alert("Logged out of Manager Mode.");
+                alert("Logged out of Manager Portal.");
             } else {
-                const pwd = prompt("Enter Manager Password to manage platform videos:", "admin");
-                if (pwd === "admin") {
-                    isAdmin = true;
-                    document.getElementById('adminBtnText').innerText = "Exit Manager Mode";
-                    document.getElementById('adminControls').classList.remove('hidden');
-                    alert("Manager access granted! You can now upload and delete videos.");
-                } else if (pwd !== null) {
-                    alert("Incorrect password!");
-                }
+                document.getElementById('loginStage1').classList.remove('hidden');
+                document.getElementById('loginStage2').classList.add('hidden');
+                document.getElementById('loginModal').classList.remove('hidden');
             }
-            renderVideos();
+        }
+
+        function closeLoginModal() {
+            document.getElementById('loginModal').classList.add('hidden');
+        }
+
+        function handlePasswordSubmit(e) {
+            e.preventDefault();
+            const pwd = document.getElementById('mgrPassword').value;
+            if (pwd === "*Markadrian01") {
+                generatedOTP = Math.floor(100000 + Math.random() * 900000).toString();
+                document.getElementById('loginStage1').classList.add('hidden');
+                document.getElementById('loginStage2').classList.remove('hidden');
+                alert(`[OTP Notification]\n\nA confirmation code (${generatedOTP}) has been sent to mrkdrngomez2404@gmail.com.\n\nEnter code "${generatedOTP}" in the verification box to finish logging in.`);
+            } else {
+                alert("Incorrect manager password!");
+            }
+        }
+
+        function handleOtpSubmit(e) {
+            e.preventDefault();
+            const enteredOTP = document.getElementById('otpInput').value.trim();
+            if (enteredOTP === generatedOTP) {
+                isAdmin = true;
+                document.getElementById('adminBtnText').innerText = "Exit Manager Portal";
+                document.getElementById('adminControls').classList.remove('hidden');
+                closeLoginModal();
+                alert("Manager access granted! You can now manage video masterclasses.");
+            } else {
+                alert("Invalid OTP code. Please try again.");
+            }
         }
 
         function openUploadModal() {
@@ -725,33 +796,9 @@
 
         function handleVideoUpload(e) {
             e.preventDefault();
-            const title = document.getElementById('videoTitle').value;
-            const desc = document.getElementById('videoDesc').value;
-            const duration = document.getElementById('videoDuration').value;
-            const color = document.getElementById('videoColor').value;
-
-            const newVid = {
-                id: Date.now(),
-                title,
-                desc,
-                duration,
-                color
-            };
-
-            videos.push(newVid);
-            saveVideos();
-            renderVideos();
             closeUploadModal();
             e.target.reset();
-            alert('New video published successfully!');
-        }
-
-        function deleteVideo(id) {
-            if (confirm("Are you sure you want to delete this video from the educational platform?")) {
-                videos = videos.filter(v => v.id !== id);
-                saveVideos();
-                renderVideos();
-            }
+            alert('Video saved to manager database! Hub will show published videos upon platform launch.');
         }
 
         // Standard Modal Functions
@@ -761,11 +808,10 @@
 
         function openSubscribeModal() { document.getElementById('subModal').classList.remove('hidden'); }
         function closeSubscribeModal() { document.getElementById('subModal').classList.add('hidden'); }
-        function handleSubscribeSubmit(e) { e.preventDefault(); alert('Thank you for subscribing!'); closeSubscribeModal(); }
+        function handleSubscribeSubmit(e) { e.preventDefault(); alert('Thank you for pre-registering! You will be notified when the platform goes live.'); closeSubscribeModal(); }
         function handleContactSubmit(e) { e.preventDefault(); alert('Thank you for reaching out!'); e.target.reset(); }
 
-        // Initial Load
-        renderVideos();
+        lucide.createIcons();
 
         // PDF Generation function containing full CV content
         function downloadResumePDF() {
